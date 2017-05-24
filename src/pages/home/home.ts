@@ -32,7 +32,7 @@ export class HomePage {
     two(){
         this.weight = this.weight - 2;
         this.setHeight();
-        if(this.weight < -50){
+        if(this.weight < -48){
             this.showAlert("two");
         }
     }
@@ -46,7 +46,12 @@ export class HomePage {
         let alert = this.alertCtrl.create({
             title: 'Game over',
             subTitle: 'Player ' + winner + 'wins the game',
-            buttons: ['OK']
+            buttons: [{
+                text: 'OK',
+                handler: () => {
+                    this.init();
+                }
+            }]
         });
         alert.present();
     }
