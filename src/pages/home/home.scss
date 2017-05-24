@@ -1,19 +1,21 @@
 page-home {
     button{
-        padding:0;
-        margin:0;
+        padding:0px;
+        margin:0px 0px 0px;
     }
     .battle{
         width:100%;
         height:100%;
     }
     .one{
+        display: inherit;
         width:100%;
         background-color: #FFE4E1;
         color: #87CEFA!important;
         font-size:1.6em;
     }
     .two{
+        display: inherit;
         width:100%;
         background-color: #87CEFA;
         color: #FFE4E1!important;

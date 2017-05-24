@@ -11,34 +11,37 @@ import { AlertController } from 'ionic-angular';
     `
 })
 export class HomePage {
+    oStartVal:number = 50;
+    tStartVal:number = 50;
     weight:number = 0;
-    oHeight:string = "50%";
-    tHeight:string = "50%";
+    damage:number = 2;
+    oHeight:string = "";
+    tHeight:string = "";
     constructor(public alertCtrl: AlertController) {
         this.init();
     }
     init(){
         this.weight = 0;
-        this.oHeight = "50%";
-        this.tHeight = "50%";
+        this.oHeight = this.oStartVal + "%";
+        this.tHeight = this.tStartVal + "%";
     }
     one(){
-        this.weight = this.weight + 2;
+        this.weight = this.weight + this.damage;
         this.setHeight();
-        if(this.weight > 50){
+        if(this.weight > this.oStartVal){
             this.showAlert("one");
         }
     }
     two(){
-        this.weight = this.weight - 2;
+        this.weight = this.weight - this.damage;
         this.setHeight();
-        if(this.weight < -48){
+        if(this.weight < this.tStartVal * -1){
             this.showAlert("two");
         }
     }
     setHeight(){
-        var o = 50 + this.weight;
-        var t = 100 - o;
+        var o = this.oStartVal + this.weight;
+        var t = this.oStartVal + this.tStartVal - o;
         this.oHeight = o + "%";
         this.tHeight = t + "%";
     }
