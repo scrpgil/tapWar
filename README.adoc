@@ -1,0 +1,7 @@
+= tapWar
+
+同名のアプリをPWAで再現してみたものになります。 +
+以下のURLをクリックし一旦「ホーム画面に追加」してから再度ホーム画面から立ち上げて遊んでください。 +
+
+. link:https://scrpgil.github.io/tapWar/[https://scrpgil.github.io/tapWar/]
+
